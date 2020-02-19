@@ -1,3 +1,4 @@
+print("aiaiai")
 arthur_guei = True
 if arthur_guei:
     n=2
