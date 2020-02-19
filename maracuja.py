@@ -4,3 +4,4 @@ if arthur_guei:
     for x in range(4):
         n=n**n
         print(n)
+print("iaiaia")
