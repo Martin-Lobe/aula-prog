@@ -1,4 +1,4 @@
-print("12aiaiai")
+print("pau")
 arthur_guei = True
 if arthur_guei:
     n=2
@@ -6,3 +6,4 @@ if arthur_guei:
         n=n**n
         print(n)
 print("iaiaia")
+
