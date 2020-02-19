@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+
+{% block conteudo %}
+    {{current_user.nome}}<br>
+    {{current_user.cpf}}<br>
+    <img src="{{url_for('static', filename=current_user.caminho_foto)}}" height="128" width="128" align="middle" >
+    <ul>
+        {%for anotacao in current_user.anotacoes%}
+            <li>{{anotacao.titulo}} - {{anotacao.texto}}</li>
+        {%endfor%}
+    </ul>
+{% endblock %}

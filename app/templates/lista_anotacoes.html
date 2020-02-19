@@ -1,0 +1,7 @@
+{%extends 'base.html'%}
+
+{%block conteudo%}
+    {%for registro in resultado%}
+        <p>{{registro.titulo}}:{{registro.texto}}</p><br>
+    {%endfor%} 
+{%endblock%}

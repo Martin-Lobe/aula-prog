@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%from "form_helpers.html" import render_field %}
+
+{%block conteudo%}
+    <h1>Tela de cadastro de anotações.</h1>
+    <form action="/cadastrar_usuario" method="post" enctype="multipart/form-data">
+        {{form.csrf_token}}
+        {{render_field(form.cpf)}}
+        {{render_field(form.email)}}
+        {{render_field(form.nome)}}
+        {{render_field(form.senha)}}
+        {{render_field(form.senha2)}}
+        {{render_field(form.foto)}}
+        {{form.submit(class="btn btn-primary btn-lg")}}
+    </form>
+{%endblock%}

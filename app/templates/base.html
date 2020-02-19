@@ -1,0 +1,67 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} 
+    {%if title%}
+        {{ title }}
+    {%else%}
+      <title>Sistema de Registro de Anotações</title>
+    {%endif%}
+{% endblock %}
+
+{% block navbar %}
+    <ul class="nav nav-tabs nav-justified">
+    {%if not current_user.is_authenticated%}
+       <li> <a href="/logar">Logar</a> </li>
+       <li> <a href="/cadastrar_usuario">Cadastrar novo usuário</a></li>
+    {%else%}
+        <li>Bem vindo {{current_user.nome}} !</li>
+        <li><a href="/cadastrar_anotacao">Cadastrar Anotações</a></li>
+        <li><a href="/carregar_anotacoes">Atualizar Anotações</a></li>
+        <li><a href="/remover_anotacao">Remover Anotações</a></li>
+        <li><a href="/logout">Logout</a></li>
+    {%endif%}
+    </ul>
+{% endblock %}
+
+{%block content%}
+
+{%block conteudo%}
+{% endblock %}
+<footer class="page-footer font-small green pt-4" style="background-color: rgba(221, 212, 212, 0.822);">
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-6 mt-md-0 mt-3">
+          <h5 class="text-uppercase">IFC</h5>
+          <p>Aula de programação 1!</p>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+          </ul>  
+        </div>
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+  
+  </footer>
+
+{%endblock%}

@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+
+{%block conteudo%}
+    <form action="/carregar_anotacoes" method="post">
+        {{form.csrf_token}}
+        {{form.lista.label}}{{form.lista}}<br>
+        {{form.submit}}
+    </form>
+    {%if atualizar%}
+        <form action="/atualizar_anotacao" method="post">
+            {{atualizar.csrf_token}}
+            {{atualizar.id}}
+            {{atualizar.titulo.label}}:{{atualizar.titulo}}<br>
+            {{atualizar.texto.label}}:{{atualizar.texto}}<br>
+            {{atualizar.data.label}}:{{atualizar.data}}<br>
+            {{atualizar.submit}}
+        </form>
+    {%endif%}
+{%endblock%}

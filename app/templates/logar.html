@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+{%from "form_helpers.html" import render_field %}
+
+{%block conteudo%}
+    <form action="/logar" class="form form-vertical" method="post">
+        {{form.csrf_token}}
+        {{render_field(form.nome)}}
+
+        <!-- ISSO É O QUE A FUNÇÃO render_field FAZ:
+            p>
+            {{ form.nome.label() }}<br>
+            {{ form.nome(size=32) }}
+            {% if form.nome.errors %}
+                <ul class=errors>
+                {% for error in form.nome.errors %}
+                    <li style="color: red;">{{ error }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </p-->
+
+
+        {{render_field(form.senha)}}
+        {{form.submit()}}
+    </form>
+{%endblock%}
