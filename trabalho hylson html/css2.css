@@ -1,0 +1,29 @@
+.linha{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.coluna{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+
+}
+div{
+	
+}
+.tabela{
+	height: 800px; 
+}
+img{
+	width: 40px;
+	height: 40px;
+
+}
+form{
+	text-align: center;
+	padding-top: 25%;
+}
