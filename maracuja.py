@@ -7,3 +7,5 @@ if arthur_guei:
         print(n)
 print("iaiaia")
 
+X=32
+
